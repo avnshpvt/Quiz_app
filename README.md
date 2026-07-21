@@ -4,7 +4,7 @@ A premium, production-level **Quiz Application** built using **Flutter Web**. De
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Pixel-Accurate UI Design**:
   - Electric Blue outer page canvas (`#3577FF`).
@@ -19,9 +19,9 @@ A premium, production-level **Quiz Application** built using **Flutter Web**. De
 - **Question Selector Grid (Right Sidebar)**:
   - Header showing progress (`Question X/20`) and an interactive `Need Help ?` modal dialog.
   - 20-Badge Circular Grid:
-    - 🌸 **Pink Circle (`#FF8A8A`)**: Active / Current question.
-    - 🔷 **Blue Circle (`#93C5FD`)**: Answered question.
-    - ⬜ **Gray Circle (`#CBD5E1`)**: Unanswered question.
+    - **Pink Circle (`#FF8A8A`)**: Active / Current question.
+    - **Blue Circle (`#93C5FD`)**: Answered question.
+    - **Gray Circle (`#CBD5E1`)**: Unanswered question.
   - Direct jump navigation on badge tap.
 - **Local Persistence (`SharedPreferences`)**:
   - Automatically saves user choices and active question index.
@@ -32,7 +32,7 @@ A premium, production-level **Quiz Application** built using **Flutter Web**. De
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 Built following a clean, modular production architecture:
 
@@ -40,30 +40,30 @@ Built following a clean, modular production architecture:
 lib/
 ├── core/
 │   ├── constants/
-│   │   ├── app_colors.dart       # App color palette, gradients & drop shadows
-│   │   └── app_styles.dart       # Typography & text styles (Google Fonts Inter)
+│   │   ├── app_colors.dart       
+│   │   └── app_styles.dart      
 │   └── services/
 │       └── quiz_storage_service.dart # SharedPreferences storage helper
 ├── models/
-│   └── question_model.dart       # Question data model & 20-question dataset
+│   └── question_model.dart       
 ├── providers/
-│   └── quiz_provider.dart        # State management (Navigation, Locking, Persistence)
+│   └── quiz_provider.dart       
 ├── views/
 │   ├── widgets/
-│   │   ├── header_banner.dart    # Top pill header widget
-│   │   ├── question_card.dart    # Blue-outlined question card
-│   │   ├── option_card.dart      # Interactive option card with status feedback
-│   │   ├── nav_buttons.dart      # Prev / Next action buttons
-│   │   ├── explanation_card.dart # Solution explanation box
-│   │   ├── question_selector.dart# Right sidebar circular 1..20 badge grid
-│   │   └── help_dialog.dart      # Instructions & Reset modal
-│   └── quiz_screen.dart          # Main responsive layout container
-└── main.dart                     # App entry point with Provider & SharedPreferences init
+│   │   ├── header_banner.dart   
+│   │   ├── question_card.dart    
+│   │   ├── option_card.dart      
+│   │   ├── nav_buttons.dart      
+│   │   ├── explanation_card.dart 
+│   │   ├── question_selector.dart
+│   │   └── help_dialog.dart      
+│   └── quiz_screen.dart         
+└── main.dart                     
 ```
 
 ---
 
-## 🚀 Setup & Installation Instructions
+##  Setup & Installation Instructions
 
 ### Prerequisites
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (`v3.12.0` or higher)
@@ -99,7 +99,7 @@ lib/
 
 ---
 
-## 📦 Building for Production
+##  Building for Production
 
 To create an optimized production release web bundle:
 
@@ -109,36 +109,6 @@ flutter build web --release
 
 The output files will be generated in `build/web/`.
 
----
-
-## 🔥 Firebase Hosting Deployment
-
-To deploy the application to Firebase Hosting:
-
-1. **Install Firebase CLI & FlutterFire**:
-   ```bash
-   npm install -g firebase-tools
-   dart pub global activate flutterfire_cli
-   ```
-
-2. **Configure Firebase Project**:
-   ```bash
-   flutterfire configure
-   ```
-
-3. **Initialize Firebase Hosting**:
-   ```bash
-   firebase init hosting
-   ```
-   - Select your Firebase Project.
-   - Set public directory: `build/web`
-   - Configure as single-page app: `Yes`
-
-4. **Build and Deploy**:
-   ```bash
-   flutter build web --release
-   firebase deploy --only hosting
-   ```
 
 ---
 
